@@ -12,8 +12,9 @@
 
   --title-color: #ffc2e6;
   --background-image: url("../images/cover-image-light.png");
-  --subtitle-background-color: #FF8DCB;
+  --subtitle-background-color: #ff8dcb;
   --subtitle-color: #353430;
+  --button-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {

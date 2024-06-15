@@ -4,21 +4,51 @@
 */
 
 :root {
-    --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    --accent-color: #FF0070;
-    --main-font: 'IBM Plex mono';
-    --title-color: #DB00FF;
-    --subtitle-color: #000028;
-    --background-image: url('../images/cover-image-dark.png');
-    --subtitle-background-color: #FF0070;
-    --main-font-size: 18px;
-
-
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --accent-color: #ff0070;
+  --main-font: "IBM Plex mono";
+  --title-color: #db00ff;
+  --subtitle-color: #000028;
+  --background-image: url("../images/cover-image-dark.png");
+  --subtitle-background-color: #ff0070;
+  --main-font-size: 18px;
+  --button-color: #ff0070;
+  --title-description-position: 3/1/4/3;
+  --page-margin: 10px;
+  --header-buttons-justify: end;
+  --header-buttoms-align: center;
+  --header-buttoms-direction: column;
+  --header-buttom-margin: 5px 0 5px 0;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
+  .page {
+    --page-margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__theme-menu {
+    --header-buttons-justify: center;
+    --header-buttoms-align: start;
+    --header-buttoms-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__theme-menu-button {
+    --header-buttom-margin: 0 5px 0 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .header__title {
     --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header__description {
+    --title-description-position: 3/2/4/3;
+  }
+}
