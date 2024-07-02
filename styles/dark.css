@@ -14,5 +14,8 @@
   --background-image: url("../images/cover-image-dark.png");
   --subtitle-background-color: #ff0070;
   --subtitle-color: #000028;
-  --button-color: #FF0070;
+  --button-color: #ff0070;
+  --section-title-color: #ff0070;
+  --section-text-color: #f1b2ce;
+  --section-subtitle-color: #000028;
 }
