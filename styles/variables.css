@@ -5,6 +5,8 @@
 
 :root {
   --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --decor-rec-visibillity: visible;
+  --decor-rec-margin: 10px;
   --accent-color: #ff0070;
   --main-font: "IBM Plex mono";
   --title-color: #db00ff;
@@ -14,7 +16,8 @@
   --main-font-size: 18px;
   --button-color: #ff0070;
   --title-description-position: 3/1/4/3;
-  --page-padding: 10px;
+  --page-padding: 0 10px 0 10px;
+  --decorated-zone-padding: 10px 0 10px 0;
   --header-buttons-justify: end;
   --header-buttoms-align: center;
   --header-buttoms-direction: column;
@@ -27,7 +30,9 @@
 
 @media screen and (min-width: 768px) {
   .page {
-    --page-margin: 20px;
+    --page-padding: 0 20px 0 20px;
+    --decorated-zone-padding: 20px 0 20px 0;
+    --decor-rec-margin: 20px;
   }
 
   .header__title {
@@ -54,7 +59,7 @@
 
   .cause-block {
     display: grid;
-    grid-template-columns: minmax(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
   }
 
