@@ -1,5 +1,229 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font);
+  padding: var(--page-padding);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.decorated-zone {
+  padding: var(--decorated-zone-padding);
+  height: 100vh;
+}
+
+.decorated-zone::before {
+  display: flex;
+  align-self: flex-end;
+  height: 25px;
+  width: 25px;
+  content: "";
+  border-left: 1px solid var(--button-color);
+  border-bottom: 1px solid var(--button-color);
+}
+
+.decorated-zone::after {
+  display: flex;
+  justify-self: end;
+  align-self: flex-start;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 25px;
+  width: 25px;
+  content: "";
+  border-right: 1px solid var(--button-color);
+  border-top: 1px solid var(--button-color);
+}
+
+.header__theme-menu {
+  grid-area: 1/1/2/3;
+  justify-self: var(--header-buttons-justify);
+  align-self: var(--header-buttoms-align);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: var(--header-buttoms-direction);
+}
+
+.header__theme-menu-button {
+  cursor: pointer;
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--button-color);
+  background-color: transparent;
+  border: none;
+  padding: 0 13px 0 13px;
+  width: 70px;
+  height: 26px;
+  margin: var(--header-buttom-margin);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border: 1px solid var(--button-color);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--button-color);
+}
+
+.header__decor-item {
+  visibility: var(--decor-rec-visibillity);
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  justify-self: end;
+  margin-top: var(--decor-rec-margin);
+}
+
+.header__decor-item::before {
+  content: "rec";
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+}
+
+.header__decor-item::after {
+  content: "";
+  justify-self: center;
+  align-self: center;
+  height: 9px;
+  width: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  margin: 9px;
+}
+
+.header__title {
+  font-size: var(--title-font-size);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+  grid-row-end: 3;
+}
+
+.header__description {
+  grid-area: var(--title-description-position);
+  align-self: center;
+  justify-self: stretch;
+}
+
+.title-decor {
+  background-color: var(--subtitle-background-color);
+  color: var(--subtitle-color);
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.section__block {
+  margin-bottom: 50px;
+}
+
+.section__block:first-child {
+  margin-top: 60px;
+}
+
+.section__title {
+  color: var(--section-title-color);
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  line-height: 23.4px;
+  margin-bottom: 20px;
+}
+
+.section__text {
+  color: var(--section-text-color);
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.text__link {
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 23.4px;
+  text-decoration: none;
+  text-shadow: var(--accent-color) 2px 2px;
+}
+
+.text__link:hover {
+  border-bottom: 1.5px solid var(--section-text-color);
+}
+
+.text__link:focus-visible {
+  border: 1px solid var(--section-text-color);
+  outline: none;
+}
+
+.section__subtitle {
+  background-color: var(--subtitle-background-color);
+  color: var(--section-subtitle-color);
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-top: 20px;
+}
+
+.images-section {
+  display: grid;
+  gap: var(--image-gap);
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  margin-top: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-title {
+  font-size: var(--title-font-size);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
