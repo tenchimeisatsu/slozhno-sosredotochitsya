@@ -27,6 +27,7 @@
   :root {
     /* Дублируем переменные светлой темы */
     --title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
     --background-image: url("../images/cover-image-light.png");
     --subtitle-background-color: #ff8dcb;
     --subtitle-color: #353430;
@@ -40,6 +41,16 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .header__title {
+    --accent-color: #ff0070;
+  }
+
+  .footer-title {
+    --accent-color: #ff0070;
+  }
+}
+
+@media screen and (min-width: 1024px) and (prefers-color-scheme: light) {
   .header__title {
     --accent-color: #ff0070;
   }
