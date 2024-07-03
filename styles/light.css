@@ -16,6 +16,7 @@
   --subtitle-background-color: #ff8dcb;
   --subtitle-color: #353430;
   --button-color: #353430;
+  --button-border-color: #32312d66;
   --section-title-color: #353430;
   --section-text-color: #353430;
   --section-subtitle-color: #353430;
@@ -32,6 +33,7 @@
     --subtitle-background-color: #ff8dcb;
     --subtitle-color: #353430;
     --button-color: #353430;
+    --button-border-color: #32312d66;
     --section-title-color: #353430;
     --section-text-color: #353430;
     --section-subtitle-color: #353430;
@@ -53,6 +55,10 @@
 @media screen and (min-width: 1024px) and (prefers-color-scheme: light) {
   .header__title {
     --accent-color: #ff0070;
+  }
+
+  .header__theme-menu-button:hover {
+    --button-border-color: #32312d66;
   }
 
   .footer-title {
