@@ -18,7 +18,7 @@
   --button-color: #ff0070;
   --title-description-position: 3/1/4/3;
   --page-padding: 0 10px 0 10px;
-  --decorated-zone-padding: 10px 0 10px 0;
+  --decorated-zone-padding: 10px;
   --header-buttons-justify: end;
   --header-buttoms-align: center;
   --header-buttoms-direction: column;
@@ -39,7 +39,7 @@
 @media screen and (min-width: 768px) {
   .page {
     --page-padding: 0 20px 0 20px;
-    --decorated-zone-padding: 20px 0 20px 0;
+    --decorated-zone-padding: 20px;
     --decor-rec-margin: 20px;
   }
 
@@ -138,6 +138,11 @@
     grid-row-start: 3;
     grid-row-end: 4;
   }
+
+  .footer {
+    --decorated-zone-padding: 20px;
+  }
+
   .footer-title {
     --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -161,9 +166,6 @@
 
   .header__description {
     --header-description-margin: 58px;
-  }
-  .cause-block-description {
-    max-width: 335px;
   }
 
   .prerequisite-block {
