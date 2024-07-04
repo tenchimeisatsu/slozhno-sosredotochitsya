@@ -16,7 +16,7 @@
   --subtitle-background-color: #ff0070;
   --main-font-size: 18px;
   --button-color: #ff0070;
-  --button-border-color: #FF007066;
+  --button-border-color: #ff007066;
   --title-description-position: 3/1/4/3;
   --page-padding: 0 10px 0 10px;
   --decorated-zone-padding: 10px;
@@ -33,6 +33,7 @@
   --section-margin-top: 40px;
   --section-margin-bottom: 50px;
   --image-gap: 10px;
+  --block-gap: 20px;
   --images-section-margin: 10px;
   --last-section-block: 40px;
 }
