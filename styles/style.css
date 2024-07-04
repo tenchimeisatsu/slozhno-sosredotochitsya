@@ -84,7 +84,7 @@
   border: 1px solid var(--button-border-color);
 }
 
-.header__theme-menu-button:focus-visible {
+.header__theme-menu-button:focus {
   outline: none;
 }
 
