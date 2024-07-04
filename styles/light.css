@@ -57,10 +57,6 @@
     --accent-color: #ff0070;
   }
 
-  .header__theme-menu-button:hover {
-    --button-border-color: #32312d66;
-  }
-
   .footer-title {
     --accent-color: #ff0070;
   }
